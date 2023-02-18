@@ -1,0 +1,14 @@
+.icon {
+  cursor: pointer;
+  svg {
+    cursor: pointer;
+    width: 3.5em;
+    height: 3.5em;
+  }
+}
+.LeftArrowIcon {
+  @extend .icon;
+  svg {
+    transform: rotate(180deg);
+  }
+}
