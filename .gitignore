@@ -1,2 +1,12 @@
 node_modules
 node_modules
+.next
+.next/build-manifest.json
+.next/trace
+.next/server/pages-manifest.json
+.next/static/chunks/webpack.js
+.next/static/chunks/pages/index.js
+.next/static/development/_buildManifest.js
+.next/static/webpack/08aa0cb47e53b9f0.webpack.hot-update.json
+.next/static/webpack/webpack.08aa0cb47e53b9f0.hot-update.js
+.next/static/webpack/pages/index.08aa0cb47e53b9f0.hot-update.js

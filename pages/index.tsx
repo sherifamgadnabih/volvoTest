@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { Spinner, View } from "vcc-ui";
 import { CarItem } from "@/types/Car.model";
 import home from "../styles/home.module.scss";
@@ -13,7 +11,7 @@ import CarCard from "../src/components/CarCard";
 interface Props {
   carsList?: CarItem[];
 }
-const Home: NextPage = (props: Props) => {
+const Home = (props: Props) => {
   const { carsList = [] } = props;
   const [carTypes, setCarTypes] = useState<string[]>([""]);
   const [filteredCarList, setFilteredCarList] = useState<CarItem[]>([]);
