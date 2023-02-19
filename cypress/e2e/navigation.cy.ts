@@ -13,3 +13,4 @@ describe("Navigation", () => {
     cy.url().should("include", "/shop");
   });
 });
+export {};

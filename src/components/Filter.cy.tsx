@@ -21,3 +21,4 @@ describe("<Filter />", () => {
     cy.get("option").eq(3).contains("suv");
   });
 });
+export {};
