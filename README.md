@@ -8,7 +8,7 @@ This project bootstrapped with [`NextJS`](https://nextjs.org).
 
 ## Getting Started
 
-First, run the custom development server:
+First, run the development server:
 
 ```bash
 npm i
@@ -29,11 +29,6 @@ E2E testing:
 ```bash
 npm run cypress
 ```
-
-**Note:** Please build and run project before
-running the command
-
-**Note:** Custom server is created to ease the monitoring of code change during developement, rather than build and run every time. No additional server functioanlity is added, but the future scope is there to use this custom server as per requirement.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
