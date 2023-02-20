@@ -19,7 +19,6 @@ const Home = (props: Props) => {
     const carBodyTypes = carsList.map((car: CarItem) => car.bodyType);
     setCarTypes([...new Set(carBodyTypes)]);
     setFilteredCarList(carsList);
-    console.log(filteredCarList);
   }, []);
   const onFilterValueChange = (value: string) => {
     if (value === "Show All") {
