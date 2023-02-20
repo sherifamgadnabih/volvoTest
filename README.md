@@ -1,46 +1,70 @@
 # Volvo Cars (Global Online Digital)
 
-## Front-end coding test (React)
+This project bootstrapped with [`NextJS`](https://nextjs.org).
 
-Our team's designer has come up with a new design to show our latest and greatest recharge cars on the website.
+## Application is deployed and published using Vercel.
 
-Here is how the design look like for desktop and mobile (files are stored under `docs` folder)
+**You can check the application through this [link](https://volvotest-ih3j-git-master-sherifamgadnabih.vercel.app/)**
 
-### Desktop
+## Getting Started
 
-![ProductListDesktop](./docs/ProductList-Desktop.png)
+First, run the custom development server:
 
-### Mobile
-
-![ProductListDesktop](./docs/ProductList-Mobile.png)
-
-The data required to render the design is under `public/api/cars.json` folder. You need to fetch the data from the client side and render it in the browser. The data looks like this:
-
-```json
-[
-  {
-    "id": "xc90-recharge",
-    "modelName": "XC90 Recharge",
-    "bodyType": "suv",
-    "modelType": "plug-in hybrid",
-    "imageUrl": "/images/xc90_recharge.jpg"
-  }
-]
+```bash
+npm i
+&&
+npm run dev
 ```
 
-The product owner is telling you that you can generate the links to the learn and shop pages of each car by concatating the `id` of the car to the learn (`/learn/`) and shop (`/shop/`) urls.
+**Testing**:
 
-Two extra SVG icons are also provided by our designer which are stored under `docs` folder.
+Unit testing:
 
-## Requirements
+```bash
+npm run component:headless
+```
 
-- The project is bootstraped using [Next.js](https://nextjs.org/).
-- Browser support is modern ever-green browsers.
-- Implement this design using React and Typescript.
-- Accessibility is important.
-- Code Structure and reusablity is important.
+E2E testing:
 
-## Bonus Points:
+```bash
+npm run cypress
+```
 
-- If you use our design system component library, [VCC-UI](https://vcc-ui.vercel.app/)
-- If you add a filter bar on the top to filter cars by `bodyType`
+**Note:** Please build and run project before
+running the command
+
+**Note:** Custom server is created to ease the monitoring of code change during developement, rather than build and run every time. No additional server functioanlity is added, but the future scope is there to use this custom server as per requirement.
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Features:
+
+1. Initial landing page displays carousel of cars which is created using [ReactMultiCarousel]
+2. After the initial launch, user is able to filter the results (based on `bodyType`) with help of provided filters.
+3. Clcking on Learn/Shop will redirect you to the respective dynamic page. URL will be changed according to the car id.
+4. A mobile-first design approach is implemented using modular css where,
+   - device < 464 will render 2 cards (Mobile View)
+   - 464 < device < 1024 will render 2 cards. (Tab View)
+   - devices > 1024 will render 4 cards in the view area. (Laptop/Desktop View)
+
+## Asumptions:
+
+1. [VCC-UI]component library have been used for this responsive design.
+2. Server side rendering has been implemented in all pages
+3. E2e testing using Cypress
+4. Unit testing using Cypress
+
+## Project Structure:
+
+1. `index.tsx` is the staring file in this repository.
+2. `_app.tsx` is used for router setup and layout.
+3. All the screens/pages are under `pages`
+4. resuable components and elements are under the src folder
+
+## Screenshots
+
+![VolvoCars](/public/screenshots/desktop.png?raw=true "Desktop View")
+
+![VolvoCars](/public/screenshots/tablet.png?raw=true "Tab View")
+
+![VolvoCars](/public/screenshots/mobile.png?raw=true "Mobile View")
